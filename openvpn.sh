@@ -12,6 +12,8 @@ exec > >(tee -a $${LOG_FILE}) 2>&1
 echo ">>> Starting OpenVPN Access Server Installation Script at $(date) <<<"
 
 # --- Update packages and install wget (just in case) ---
+
+#Tom in our case we are usually using debian ubuntu but I provided a wider option in case using yum package manager
 echo ">>> Updating packages and ensuring wget is installed... <<<"
 if command -v apt-get &> /dev/null; then
     export DEBIAN_FRONTEND=noninteractive # Avoid prompts
